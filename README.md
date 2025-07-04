@@ -1,7 +1,5 @@
 # Artmograph
 
-### ArtmoGraph
-
 IoT & AI-powered system that transforms live environmental data into stunning generative art.
 
 ArtmoGraph combines sensor-driven IoT, AI language models, and generative image technology to visualize real-time atmospheric conditions as digital artwork.
