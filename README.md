@@ -23,6 +23,7 @@ Developed as a major project for BCA Semester 6 under the Department of Computer
 
 ### How it Works
 
+ADD Diagram
     
 
 ---
@@ -80,7 +81,7 @@ README.md
 
 - Example Outputs
 
-
+add genretd art with prompt
 
 ---
 
