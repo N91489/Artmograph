@@ -41,13 +41,13 @@ Developed as a major project for BCA Semester 6 under the Department of Computer
 ### Project Structure
 
 artmograph/
-├── esp32/           # Arduino sketch for ESP32 + sensors
-├── terraform/       # Terraform scripts for AWS infra
-├── server/          # MQTT listener & AI automation scripts
-├── web/             # HTML for Apache-hosted display
-├── requirements.txt # Python packages
-├── LICENSE
-└── README.md
+esp32/           # Arduino sketch for ESP32 + sensors
+terraform/       # Terraform scripts for AWS infra
+server/          # MQTT listener & AI automation scripts
+web/             # HTML for Apache-hosted display
+requirements.txt # Python packages
+LICENSE
+README.md
 
 ---
 
@@ -73,8 +73,8 @@ artmograph/
 
 
 - View Your Art
-	•	Open your EC2 public IP in a browser.
-	•	See real-time evolving artwork based on your environment!
+   - Open your EC2 public IP in a browser.
+   - See real-time evolving artwork based on your environment!
 
 ---
 
@@ -85,11 +85,11 @@ artmograph/
 ---
 
 - Future Enhancements
-	•	Additional sensors (air quality, UV index, wind speed)
-	•	User controls for style & themes
-	•	Cloud storage of generated artwork history (S3)
-	•	Mobile app for live viewing & downloads
-	•	Predictive AI to generate art based on forecasts
+   - Additional sensors (air quality, UV index, wind speed)
+   - User controls for style & themes
+   - Cloud storage of generated artwork history (S3)
+   - Mobile app for live viewing & downloads
+   - Predictive AI to generate art based on forecasts
 
 ---
 
