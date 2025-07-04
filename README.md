@@ -1,5 +1,5 @@
 # Artmograph
----
+
 ### ArtmoGraph
 
 IoT & AI-powered system that transforms live environmental data into stunning generative art.
@@ -9,8 +9,6 @@ It demonstrates how climate data can inspire creativity, making environmental aw
 
 Developed as a major project for BCA Semester 6 under the Department of Computer Science, CHRIST (Deemed to be University).
 
----
-
 ### Features
 
 - Real-time data collection with ESP32 + DHT22 (temperature & humidity) + BMP280 (pressure)
@@ -19,13 +17,9 @@ Developed as a major project for BCA Semester 6 under the Department of Computer
 - Web server display through Apache, accessible from any device
 - Automated pipeline from sensor input to browser output
 
----
-
 ### How it Works
 
 ADD Diagram
-    
-
 ---
 
 ### Tech Stack
@@ -36,8 +30,6 @@ ADD Diagram
 - Scripts : Python 3, Bash
 - Infra : Terraform on AWS EC2 G4 (GPU)
 - Web : Apache2, HTML
-
----
 
 ### Project Structure
 
@@ -50,8 +42,6 @@ requirements.txt # Python packages
 LICENSE
 README.md
 
----
-
 ### Quick Start
 
 - Hardware Setup
@@ -63,15 +53,12 @@ README.md
 	1.	Navigate to terraform/: ```terraform init
 				           terraform apply```
 
-
 	2.	This provisions a GPU EC2 instance with security groups for MQTT & HTTP.
 
 - Set up Server
 	1.	SSH into your EC2 instance.
 	2.	Clone this repo and install requirements: ```pip install -r requirements.txt```
 	3.	Start your pipeline: ```python3 server/mqtt_listener.py```
-
-
 
 - View Your Art
    - Open your EC2 public IP in a browser.
