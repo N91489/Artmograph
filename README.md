@@ -102,7 +102,7 @@ This project is licensed under the Apache License 2.0. See LICENSE for details.
 ### Folder READMEs
 
 For details on individual components, see:
-	•	esp32/README.md – Wiring & flashing instructions
-	•	terraform/README.md – AWS infra setup
-	•	server/README.md – Python + Bash AI pipeline
-	•	web/README.md – HTML display served by Apache
+- esp32/README.md – Wiring & flashing instructions
+- terraform/README.md – AWS infra setup
+- server/README.md – Python + Bash AI pipeline
+- web/README.md – HTML display served by Apache
