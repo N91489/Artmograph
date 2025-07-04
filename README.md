@@ -29,14 +29,12 @@ Developed as a major project for BCA Semester 6 under the Department of Computer
 
 ### Tech Stack
 
-Layer	Tools / Frameworks
-Hardware	ESP32, DHT22, BMP280
-IoT Comm	MQTT (Mosquitto)
-AI	LLaMA 3.2B (via Ollama), Stable Diffusion
-Scripts	Python 3, Bash
-Infra	Terraform on AWS EC2 G4 (GPU)
-Web	Apache2, HTML
-
+- Hardware : ESP32, DHT22, BMP280
+- IoT Comm : MQTT (Mosquitto)
+- AI : LLaMA 3.2B (via Ollama), Stable Diffusion
+- Scripts : Python 3, Bash
+- Infra : Terraform on AWS EC2 G4 (GPU)
+- Web : Apache2, HTML
 
 ---
 
@@ -61,10 +59,8 @@ artmograph/
 	3.	Update WiFi + MQTT broker IP in the code.
 
 - Deploy AWS EC2
-	1.	Navigate to terraform/:
-
-terraform init
-terraform apply
+	1.	Navigate to terraform/: ```terraform init
+				           terraform apply```
 
 
 	2.	This provisions a GPU EC2 instance with security groups for MQTT & HTTP.
