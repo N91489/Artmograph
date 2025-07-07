@@ -16,7 +16,7 @@ terraform {
 }
 
 # --------------------------------------------------------
-# 📍 Set AWS region for all resources
+# Set AWS region for all resources
 # --------------------------------------------------------
 provider "aws" {
   region = "ap-south-1" # Mumbai region
