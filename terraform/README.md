@@ -85,7 +85,7 @@ Terraform will output:
 SSH in using your key:
 
 ```chmod 600 artmograph.pem
-ssh -i artmograph.pem ubuntu@X.X.X.X
+ssh -i artmograph.pem ec2user@<instance_static_ip>
 ```
 
 **Clean up**
