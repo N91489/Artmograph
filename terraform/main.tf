@@ -100,7 +100,7 @@ resource "aws_security_group" "artmograph_security_group" {
 # --------------------------------------------------------
 resource "aws_instance" "artmograph_ec2" {
   ami                    = "ami-08e0ca9924195beba"
-  instance_type          = "t2.small"
+  instance_type          = "g4dn.xlarge"
   key_name               = aws_key_pair.artmograph_key.key_name
   vpc_security_group_ids = [aws_security_group.artmograph_security_group.id]
 
