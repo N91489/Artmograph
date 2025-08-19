@@ -1,4 +1,4 @@
-### Setup for ESP32 with DHT22 + HX711 (Pressure) Sensor
+### Setup for ESP32 with DHT22 + HX711 Pressure Sensor
 
 This project runs on an ESP32, reading:
 
@@ -16,19 +16,17 @@ It also features:
 
 1.  DHT22: Measures temperature (°C) and humidity (%RH).
 
-2.  HX711 + Load Cell: Measures force (interpreted as weight).
+2.  HX711: Measures force (interpreted as weight).
     With a known area, it calculates pressure (kPa):
     `pressure = weight (g) * 9.81 / (area cm² * 100)`
 
-3.      Sends data every 30 seconds to MQTT topic:
+3. Sends data every 30 seconds to MQTT topic:
     `sensor/data`
 
 Payload format:
 
-```
 "temperature,humidity,pressure"
-e.g. "28.75,56.42,3.28"
-```
+`e.g. "28.75,56.42,3.28"`
 
 4. LED blinks:
 
