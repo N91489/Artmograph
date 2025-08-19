@@ -1,4 +1,4 @@
-# AWS Infrastructure Setup Guide
+# Infrastructure Setup 
 
 ## Overview
 
