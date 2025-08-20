@@ -67,7 +67,7 @@ chmod +x setup.py
 3. Update WiFi credentials and MQTT broker IP
 4. Flash to ESP32
 
-# deatiled info at esp32/README.md
+deatiled info at esp32/README.md
 
 #### 4 View Your Art
 Open your EC2 public IP in a browser to see live-generated artwork!
