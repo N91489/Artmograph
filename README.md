@@ -15,7 +15,7 @@ ArtmoGraph is an IoT & AI-powered system that creates generative artwork from re
 - Fully automated pipeline from sensor to artwork
 
 ## System Architecture
-![ArtmoGraph Architecture Diagram](images/architecture-diagram.png)
+![ArtmoGraph Architecture Diagram](images/Artmograph-Main.png)
 
 ## Tech Stack
 | Component | Technology |
@@ -68,9 +68,9 @@ Open your EC2 public IP in a browser to see live-generated artwork!
 
 ## Sample Generated Artwork
 
-![Sample Art 1](images/sample-art-1.png)
-![Sample Art 2](images/sample-art-2.png)
-![Sample Art 3](images/sample-art-3.png)
+![Sample Art 1](images/Gen-Img-1.png)
+![Sample Art 2](images/Gen-Img-2.png)
+![Sample Art 3](images/Gen-Img-3.png)
 
 ## Project Structure
 ```
