@@ -45,7 +45,7 @@ sudo reboot
 
 ## System Architecture
 
-DIAGRAM
+![ArtmoGraph Architecture Diagram](images/Artmograpgh-Server.png)
 
 ## Directory Structure
 
