@@ -1,9 +1,9 @@
-### Setup for ESP32 with DHT22 + HX711 Pressure Sensor
+### Setup for ESP32 with DHT22 + Hx710b Pressure Sensor
 
 This project runs on an ESP32, reading:
 
 - Temperature & Humidity from a DHT22 sensor
-- Pressure (via load cell + HX711 amplifier)
+- Pressure from a Hx710b sensor
 
 It then publishes these readings to an MQTT broker (like one hosted on AWS) at regular intervals.
 
@@ -16,7 +16,7 @@ It also features:
 
 1.  DHT22: Measures temperature (°C) and humidity (%RH).
 
-2.  HX711: Measures force (interpreted as weight).
+2.  Hx710b: Measures force (interpreted as weight).
     With a known area, it calculates pressure (kPa):
     `pressure = weight (g) * 9.81 / (area cm² * 100)`
 
@@ -55,8 +55,8 @@ Payload format:
 
 - DHT sensor library (by Adafruit)
 - Adafruit Unified Sensor
-- HX711 (by Bogdan Necula or similar)
-- PubSubClient (by Nick O’Leary for MQTT)
+- Hx710b
+- PubSubClient 
 
 4. Cofigure the Settings
 
@@ -75,7 +75,7 @@ Payload format:
 - Select port: Tools > Port
 - Click Upload.
 
-6. Calibrating the HX711
+6. Calibrating the Hx710b
 
 **Calibration finds:**
 
