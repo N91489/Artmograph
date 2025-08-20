@@ -44,6 +44,9 @@ ArtmoGraph is an IoT & AI-powered system that creates generative artwork from re
 cd infrastructure/
 terraform init
 terraform apply
+
+# deatiled info at infrastructure/README.md
+
 ```
 This provisions the AWS EC2 GPU instance with required security groups.
 
@@ -55,7 +58,7 @@ cd Artmograph/server-setup/
 chmod +x setup.py
 ./setup.py
 
-# Run setup scripts as per server-setup/README.md
+# deatiled info at server-setup/README.md
 ```
 
 #### 3 ESP32 Setup
@@ -63,6 +66,8 @@ chmod +x setup.py
 2. Open `esp32/sensor_publish.ino` in Arduino IDE
 3. Update WiFi credentials and MQTT broker IP
 4. Flash to ESP32
+
+# deatiled info at esp32/README.md
 
 #### 4 View Your Art
 Open your EC2 public IP in a browser to see live-generated artwork!
@@ -79,15 +84,15 @@ artmograph/
 ## Documentation
 
 For detailed setup instructions, refer to:
-- [`esp32/README.md`](esp32/) - Hardware wiring & firmware
-- [`infrastructure/README.md`](infrastructure/) - AWS infrastructure details
-- [`server-setup/README.md`](server-setup/) - Server & AI pipeline setup
+- [`esp32/README.md`](https://github.com/N91489/Artmograph/blob/main/esp32/README.md) - Hardware wiring & firmware
+- [`infrastructure/README.md`](https://github.com/N91489/Artmograph/tree/main/infrastructure) - AWS infrastructure details
+- [`server-setup/README.md`](https://github.com/N91489/Artmograph/tree/main/server-setup) - Server & AI pipeline setup
 
 ## Future Enhancements
 
 - Additional sensors (air quality, UV index)
 - User-selectable art styles
-- Artwork history storage (S3)
+- Artwork history storage 
 - Mobile app for live viewing and settings
 - Predictive art based on weather forecasts
 
@@ -99,6 +104,6 @@ For detailed setup instructions, refer to:
 
 ## License
 
-Apache License 2.0 - See [LICENSE](LICENSE) for details
+Apache License 2.0 - See [LICENSE](https://github.com/N91489/Artmograph/blob/main/LICENSE) for details
 
 ---
