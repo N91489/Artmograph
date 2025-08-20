@@ -47,7 +47,7 @@ sudo reboot
 
 DIAGRAM
 
-## 📁 Directory Structure
+## Directory Structure
 
 After installation, the following directories are created:
 
