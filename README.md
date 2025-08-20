@@ -1,94 +1,104 @@
-# Artmograph
+# ArtmoGraph
 
-IoT & AI-powered system that transforms live environmental data into stunning generative art.
+**Transform live environmental data into stunning AI-generated art**
 
-ArtmoGraph combines sensor-driven IoT, AI language models, and generative image technology to visualize real-time atmospheric conditions as digital artwork.
-It demonstrates how climate data can inspire creativity, making environmental awareness both interactive and beautiful.
+## Overview
 
-Developed as a major project for BCA Semester 6 under the Department of Computer Science, CHRIST (Deemed to be University).
+ArtmoGraph is an IoT & AI-powered system that creates generative artwork from real-time atmospheric conditions. Using ESP32 sensors to capture temperature, humidity, and pressure data, it generates creative prompts through LLaMA and produces unique digital art via Stable Diffusion - all viewable in your browser.
 
-### Features
+*Developed as a major project for BCA Semester 6, Department of Computer Science, CHRIST (Deemed to be University)*
 
-- Real-time data collection with ESP32 + DHT22 (temperature & humidity) + BMP280 (pressure)
-- Creative prompt generation using LLaMA 3.2B on an AWS GPU instance
-- AI image creation via Stable Diffusion (AUTOMATIC1111)
-- Web server display through Apache, accessible from any device
-- Automated pipeline from sensor input to browser output
+## Features
 
-### How it Works
+- Real-time environmental monitoring (temperature, humidity, pressure)
+- AI prompt generation using LLaMA 3.2B
+- Automatic artwork creation with Stable Diffusion
+- Web-based display accessible from any device
+- AWS cloud infrastructure with GPU support
+- Fully automated pipeline from sensor to artwork
 
-ADD Diagram
----
+## Tech Stack
 
-### Tech Stack
+| Component | Technology |
+|-----------|------------|
+| Hardware | ESP32, DHT22, Hx710B |
+| IoT | MQTT (Mosquitto) |
+| AI Models | LLaMA 3.2B, Stable Diffusion |
+| Cloud | AWS EC2 G4 (GPU instance) |
+| Backend | Python, Bash |
+| Frontend | Apache2, HTML |
+| IaC | Terraform |
 
-- Hardware : ESP32, DHT22, BMP280
-- IoT Comm : MQTT (Mosquitto)
-- AI : LLaMA 3.2B (via Ollama), Stable Diffusion
-- Scripts : Python 3, Bash
-- Infra : Terraform on AWS EC2 G4 (GPU)
-- Web : Apache2, HTML
+## Quick Setup
 
-### Project Structure
+### Prerequisites
+- ESP32 with DHT22 and BMP280 sensors
+- AWS account with GPU instance access
+- Arduino IDE for ESP32 programming
+- Terraform installed locally
 
+### Installation Steps
+
+#### 1 Infrastructure Setup
+```bash
+cd infrastructure/
+terraform init
+terraform apply
+```
+This provisions the AWS EC2 GPU instance with required security groups.
+
+#### 2 Server Configuration
+SSH into your EC2 instance and:
+```bash
+git clone https://github.com/N91489/Artmograph.git
+cd Artmograph/server-setup/
+chmod +x setup.py
+./setup.py
+
+# Run setup scripts as per server-setup/README.md
+```
+
+#### 3 ESP32 Setup
+1. Wire ESP32 to sensors (see `esp32/README.md` for pinout)
+2. Open `esp32/sensor_publish.ino` in Arduino IDE
+3. Update WiFi credentials and MQTT broker IP
+4. Flash to ESP32
+
+#### 4 View Your Art
+Open your EC2 public IP in a browser to see live-generated artwork!
+
+## Project Structure
+```
 artmograph/
-esp32/           # Arduino sketch for ESP32 + sensors
-terraform/       # Terraform scripts for AWS infra
-server/          # MQTT listener & AI automation scripts
-web/             # HTML for Apache-hosted display
-requirements.txt # Python packages
-LICENSE
-README.md
+├── esp32/            # Arduino sketch & sensor code
+├── infrastructure/   # Terraform AWS deployment
+├── server-setup/     # Server configuration & AI pipeline
+└── README.md         # You are here
+```
 
-### Quick Start
+## Documentation
 
-- Hardware Setup
-	1.	Wire the ESP32 to DHT22 & BMP280 sensors.
-	2.	Flash the ESP32 with esp32/sensor_publish.ino using Arduino IDE.
-	3.	Update WiFi + MQTT broker IP in the code.
+For detailed setup instructions, refer to:
+- [`esp32/README.md`](esp32/) - Hardware wiring & firmware
+- [`infrastructure/README.md`](infrastructure/) - AWS infrastructure details
+- [`server-setup/README.md`](server-setup/) - Server & AI pipeline setup
 
-- Deploy AWS EC2
-	1.	Navigate to terraform/: ```terraform init
-				           terraform apply```
+## Future Enhancements
 
-	2.	This provisions a GPU EC2 instance with security groups for MQTT & HTTP.
+- Additional sensors (air quality, UV index)
+- User-selectable art styles
+- Artwork history storage (S3)
+- Mobile app for live viewing and settings
+- Predictive art based on weather forecasts
 
-- Set up Server
-	1.	SSH into your EC2 instance.
-	2.	Clone this repo and install requirements: ```pip install -r requirements.txt```
-	3.	Start your pipeline: ```python3 server/mqtt_listener.py```
+## Notes
 
-- View Your Art
-   - Open your EC2 public IP in a browser.
-   - See real-time evolving artwork based on your environment!
+### Hardware Variations
+- **Pressure Sensor**: Hx710B was used instead of the originally planned BMP280 due to unavailability
+- **Display**: Originally designed to display artwork on an e-ink display inside a photo frame for a physical art installation, but due to unavailability of components, the project uses web-based display instead
 
----
+## License
 
-- Example Outputs
-
-add genretd art with prompt
+Apache License 2.0 - See [LICENSE](LICENSE) for details
 
 ---
-
-- Future Enhancements
-   - Additional sensors (air quality, UV index, wind speed)
-   - User controls for style & themes
-   - Cloud storage of generated artwork history (S3)
-   - Mobile app for live viewing & downloads
-   - Predictive AI to generate art based on forecasts
-
----
-
-### License
-
-This project is licensed under the Apache License 2.0. See LICENSE for details.
-
----
-
-### Folder READMEs
-
-For details on individual components, see:
-- esp32/README.md – Wiring & flashing instructions
-- terraform/README.md – AWS infra setup
-- server/README.md – Python + Bash AI pipeline
-- web/README.md – HTML display served by Apache
